@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="p-4">
     <!-- <NuxtLoadingIndicator /> -->
     <AppHeader />
-    <div class="p-4">
+    <div class="">
       <slot />
     </div>
     <AppFooter />
