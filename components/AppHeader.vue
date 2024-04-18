@@ -11,11 +11,16 @@
           switch path to {{ locale.name }} ({{ locale.code }})
         </NuxtLink>
       </p>
+      <p>
+        <select v-model="language">
+          <option v-for="lang in locales" :key="lang" :value="lang.code">{{ lang.name }}</option>
+        </select>
+      </p>
     </div>
     <nav class="mt-8">
       <ul class="flex gap-2">
         <li><NuxtLink :to="localePath('/')">{{ $t('home') }}</NuxtLink></li>
-        <li><NuxtLink :to="localePath('about')"> {{ $t('about') }}</NuxtLink></li>
+        <li><NuxtLink :to="localePath('/about')"> {{ $t('about') }}</NuxtLink></li>
       </ul>
     </nav>
   </div>
@@ -26,4 +31,8 @@ const { t, locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 const availableLocales = computed(() => locales.value.filter(l => l.code !== locale.value))
+const language = computed({
+  get: () => locale.value,
+  set: (value) => setLocale(value)
+})
 </script>
