@@ -20,7 +20,7 @@
     <nav class="mt-8">
       <ul class="flex gap-2">
         <li><NuxtLink :to="localePath('/')">{{ $t('home') }}</NuxtLink></li>
-        <li><NuxtLink :to="localePath('/about')"> {{ $t('about') }}</NuxtLink></li>
+        <li><NuxtLink :to="localePath('about')"> {{ $t('about') }}</NuxtLink></li>
       </ul>
     </nav>
   </div>
