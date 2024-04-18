@@ -1,8 +1,6 @@
-
-import News from '~/components/News.vue';
 <template>
-  <div>
+  <div class="p-4 mb-4 bg-purple-400">
     <h1>Welcome to the homepage</h1>
-    <News />
   </div>
+  <News />
 </template>
