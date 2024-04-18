@@ -1,8 +1,8 @@
+
+import News from '~/components/News.vue';
 <template>
   <div>
     <h1>Welcome to the homepage</h1>
-    <AppAlert>
-      This is an auto-imported component.
-    </AppAlert>
+    <News />
   </div>
 </template>
