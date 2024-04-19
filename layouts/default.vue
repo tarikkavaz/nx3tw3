@@ -1,11 +1,11 @@
 <template>
   <div class="p-4">
     <!-- <NuxtLoadingIndicator /> -->
-    <AppHeader />
+    <Header />
     <div class="">
       <slot />
     </div>
-    <AppFooter />
+    <Footer />
   </div>
 </template>
 <script setup lang="ts">

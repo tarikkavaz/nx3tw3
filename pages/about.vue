@@ -3,9 +3,9 @@
     <h1 class="text-2xl font-semibold">{{ $t('about') }}</h1>
     <h2>{{ $t('welcome') }}</h2>
   </div>
-  <AppAlert>
+  <Alert>
     This is an auto-imported component.
-  </AppAlert>
+  </Alert>
 </template>
 <script setup>
 const { t } = useI18n()
