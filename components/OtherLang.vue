@@ -1,7 +1,7 @@
 <template>
-  <select v-model="language">
-    <option v-for="lang in locales" :key="lang" :value="lang.code">{{ lang.name }}</option>
-  </select>
+  <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+    {{ locale.name }} ({{ locale.code }})
+  </NuxtLink>
 </template>
 
 <script setup>
