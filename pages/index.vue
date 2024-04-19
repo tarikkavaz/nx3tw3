@@ -3,5 +3,5 @@
     <h1>Home Page</h1>
     <h2>{{ $t('welcome') }}</h2>
   </div>
-  <News />
+  <BilgiNews />
 </template>
