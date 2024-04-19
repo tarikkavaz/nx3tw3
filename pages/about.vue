@@ -21,4 +21,8 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'; 
   const { locale } = useI18n();
+  useSeoMeta({
+    title: 'About page',
+    description: 'This is the about page',
+  })
 </script>
