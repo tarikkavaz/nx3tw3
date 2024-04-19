@@ -16,24 +16,38 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/i18n'],
   i18n: {
-    vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root' // recommended
+    },
     defaultLocale: 'en',
     strategy: 'prefix',
     locales: [
       {
         code: 'en',
+        iso: 'en-GB',
         name: 'English',
+        file: 'en-GB.ts'
       },
       {
         code: 'tr',
-        name: 'Türkçe'
+        iso: 'tr-TR',
+        name: 'Türkçe',
+        file: 'tr-TR.ts'
       }
     ],
+    lazy: true,
+    langDir: 'lang',
     customRoutes: 'config',
     pages: {
       about: {
         en: '/about',
         tr: '/hakkimizda',
+      },
+      contact: {
+        en: '/contact',
+        tr: '/iletisim',
       },
     },
   }
