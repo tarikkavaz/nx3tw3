@@ -1,14 +1,26 @@
 <template>
   <div>
     <div v-if="pending" class="p-4 mb-2 bg-orange-300 last:mb-0">{{ $t('loading') }}</div>
-    <div v-else-if="filteredNews.length">
-      <NuxtLink :to="item.url" v-for="item in filteredNews" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
+    <div v-else-if="filteredNews.length || filteredEvents.length">
+      
+      <h3 v-if="filteredNews.length" class="mb-4 text-2xl">{{ $t('news') }}</h3>
+      <NuxtLink v-for="item in filteredNews" :to="item.url" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
         <img :src="item.image" :alt="item.short_16words" class="w-auto max-h-20">
         <div>
           <p class="text-2xl">{{ item.title }}</p>
           <p>{{ item.short_16words }}</p>
         </div>
       </NuxtLink>
+      
+      <h3 v-if="filteredEvents.length" class="mt-8 mb-4 text-2xl">{{ $t('events') }}</h3>
+      <NuxtLink v-for="item in filteredEvents" :to="item.url" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
+        <img :src="item.image" :alt="item.short_16words" class="w-auto max-h-20">
+        <div>
+          <p class="text-2xl">{{ item.title }}</p>
+          <p>{{ item.short_16words }}</p>
+        </div>
+      </NuxtLink>
+      
     </div>
     <div v-else class="p-4 mb-2 bg-orange-300 last:mb-0">{{ $t('nonews') }}</div>
   </div>
@@ -39,7 +51,7 @@
     newsData.value = newsDataRef.value;
   }
 
-  watch(newsDataRef, (newData, oldData) => {
+  watch(newsDataRef, (newData) => {
     if (newData) {
       newsData.value = newData;
     } else {
@@ -50,7 +62,12 @@
   const { locale } = useI18n();
 
   const filteredNews = computed(() => {
-    const localePathSegment = locale.value === 'en' ? '/en/' : '/tr/';
-    return newsData.value.results.filter(item => item.url.includes(localePathSegment));
+    const newsPathSegment = locale.value === 'en' ? '/en/news' : '/tr/haber';
+    return newsData.value.results.filter(item => item.url.includes(newsPathSegment));
+  });
+
+  const filteredEvents = computed(() => {
+    const eventsPathSegment = locale.value === 'en' ? '/en/event' : '/tr/etkinlik';
+    return newsData.value.results.filter(item => item.url.includes(eventsPathSegment));
   });
 </script>

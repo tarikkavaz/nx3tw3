@@ -5,14 +5,18 @@ export default defineI18nConfig(() => ({
       loading: 'Loading...',
       nonews: 'No News Found',
       home: 'Home',
-      about: 'About'
+      about: 'About',
+      news: 'News',
+      events: 'Events',
     },
     tr: {
       welcome: 'Hoşgeldiniz',
       loading: 'Yükleniyor...',
       nonews: 'Haber Bulunamadi',
       home: 'Anasayfa',
-      about: 'Hakkımızda'
+      about: 'Hakkımızda',
+      news: 'Haberler',
+      events: 'Etkinlikler',
     }
   }
 }))
