@@ -22,8 +22,8 @@ export default defineNuxtConfig({
         name: 'English',
       },
       {
-        code: 'fr',
-        name: 'Français'
+        code: 'tr',
+        name: 'Türkçe'
       }
     ],
     customRoutes: 'config',
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       },
       about: {
         en: '/about',
-        fr: '/a-propos',
+        fr: '/hakkimizda',
       },
     },
   }

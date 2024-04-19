@@ -7,12 +7,12 @@ export default defineI18nConfig(() => ({
       home: 'Home',
       about: 'About'
     },
-    fr: {
-      welcome: 'Bienvenue',
-      loading: 'Chargement...',
-      nonews: 'Aucune nouvelle trouvée',
-      home: 'D’accuei',
-      about: 'À Propos'
+    tr: {
+      welcome: 'Hoşgeldiniz',
+      loading: 'Yükleniyor...',
+      nonews: 'Haber Bulunamadi',
+      home: 'Anasayfa',
+      about: 'Hakkımızda'
     }
   }
 }))
