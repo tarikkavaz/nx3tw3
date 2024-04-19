@@ -1,8 +1,11 @@
 <template>
   <nav>
-    <div class="flex gap-2">
-      <NuxtLinkLocale to="/"> {{ $t('home') }} </NuxtLinkLocale>
-      <NuxtLinkLocale to="about"> {{ $t('about') }} </NuxtLinkLocale>
-    </div>
+    <NuxtLinkLocale to="/" class="px-4 py-2"> {{ $t('home') }} </NuxtLinkLocale>
+    <NuxtLinkLocale to="about" class="px-4 py-2"> {{ $t('about') }} </NuxtLinkLocale>
   </nav>
 </template>
+<style scoped>
+a:hover {
+  @apply bg-black/20;
+}
+</style>

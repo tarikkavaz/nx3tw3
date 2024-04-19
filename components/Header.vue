@@ -1,12 +1,12 @@
 <template>
   <div class="p-4 mb-4 bg-green-300" id="header">
-    <Logo />
-    <div class="flex justify-between">
-      <OtherLang />
+    <div class="flex items-center justify-between">
+      <Logo />
       <LangSwitch />
     </div>
-    <div class="mt-8">
+    <div class="flex justify-between">
       <Menu />
+      <OtherLang />
     </div>
   </div>
 </template>

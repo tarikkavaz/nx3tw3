@@ -23,16 +23,10 @@
     .router-link-active {
       @apply border-b-2 border-green-500;
     }
-    .router-link-active:hover {
-      @apply border-b-2 border-green-500 bg-slate-400;
-    }
   }
   #footer {
     .router-link-active {
       @apply border-b-2 border-blue-500;
-    }
-    .router-link-active:hover {
-      @apply border-b-2 border-blue-500 bg-slate-400;
     }
   }
 </style>
