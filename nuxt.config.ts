@@ -23,6 +23,10 @@ export default defineNuxtConfig({
     ],
     customRoutes: 'config',
     pages: {
+      '/': {
+        en: '/',
+        fr: '/',
+      },
       about: {
         en: '/about',
         fr: '/a-propos',
