@@ -7,6 +7,3 @@
     This is an auto-imported component.
   </Alert>
 </template>
-<script setup>
-const { t } = useI18n()
-</script>
