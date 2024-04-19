@@ -1,17 +1,17 @@
 <template>
   <div class="p-4 mb-4 bg-green-300">
     <div class="flex justify-between">
-      <div class="p-4 bg-green-400"> 
+      <div class=""> 
         <a href="#" v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="setLocale(locale.code)">
-          translate to {{ locale.name }} ({{ locale.code }})
+          set content to {{ locale.name }} ({{ locale.code }})
         </a>
       </div>
-      <div class="p-4 bg-green-400">
+      <div class="">
         <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
           switch path to {{ locale.name }} ({{ locale.code }})
         </NuxtLink>
       </div>
-      <div class="p-4 bg-green-400">
+      <div class="">
         <select v-model="language">
           <option v-for="lang in locales" :key="lang" :value="lang.code">{{ lang.name }}</option>
         </select>

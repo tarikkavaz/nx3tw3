@@ -21,5 +21,12 @@ export default defineNuxtConfig({
         name: 'Français'
       }
     ],
+    customRoutes: 'config',
+    pages: {
+      about: {
+        en: '/about',
+        fr: '/a-propos',
+      },
+    },
   }
 })
