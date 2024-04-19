@@ -14,19 +14,7 @@ export default defineNuxtConfig({
       email: 'info@bilgi.edu.tr' 
     }
   },
-  modules: ['@nuxtjs/i18n', 'nuxt-gtag', ['@nuxtjs/google-fonts', {
-    families: {
-      'Jacquard+24': true,
-      'Josefin+Sans': true,
-      Roboto: [400, 700],
-      Inter: [400, 700],
-      Lato: [100, 300],
-    }
-  }], "nuxt-gtag"],
-  googleFonts: {
-    preload: true,
-    subsets: 'latin-ext',
-  },
+  modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
   gtag: {
     id: 'G-XXXXXXXXXX'
   },
