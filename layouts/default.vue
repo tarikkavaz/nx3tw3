@@ -2,9 +2,9 @@
   <div class="p-4">
     <NuxtLoadingIndicator />
     <Header />
-    <div class="">
+    <main class="">
       <slot />
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
@@ -18,3 +18,11 @@
     twitterCard: 'summary_large_image',
   })
 </script>
+<style >
+.router-link-active {
+  @apply underline;
+}
+.router-link-active:hover {
+  @apply underline bg-slate-400;
+}
+</style>
