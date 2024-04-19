@@ -30,5 +30,4 @@ const language = computed({
   get: () => locale.value,
   set: (value) => setLocale(value)
 })
-console.log('Header.vue', { locale, locales, availableLocales, language })
 </script>
