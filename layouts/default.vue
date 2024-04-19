@@ -20,9 +20,9 @@
 </script>
 <style >
 .router-link-active {
-  @apply underline;
+  @apply border-b-2 border-red-400;
 }
 .router-link-active:hover {
-  @apply underline bg-slate-400;
+  @apply border-b-2 border-red-400 bg-slate-400;
 }
 </style>

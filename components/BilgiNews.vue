@@ -2,7 +2,6 @@
   <div>
     <div v-if="pending" class="p-4 mb-2 bg-orange-300 last:mb-0">{{ $t('loading') }}</div>
     <div v-else-if="filteredNews.length || filteredEvents.length">
-      
       <h3 v-if="filteredNews.length" class="mb-4 text-2xl">{{ $t('news') }}</h3>
       <NuxtLink v-for="item in filteredNews" :to="item.url" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
         <img :src="item.image" :alt="item.short_16words" class="w-auto max-h-20">
@@ -23,6 +22,8 @@
       
     </div>
     <div v-else class="p-4 mb-2 bg-orange-300 last:mb-0">{{ $t('nonews') }}</div>
+
+
   </div>
 </template>
 
