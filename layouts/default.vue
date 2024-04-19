@@ -19,10 +19,10 @@
   })
 </script>
 <style >
-.router-link-active {
-  @apply border-b-2 border-red-400;
-}
-.router-link-active:hover {
-  @apply border-b-2 border-red-400 bg-slate-400;
-}
+  .router-link-active {
+    @apply border-b-2 border-red-400;
+  }
+  .router-link-active:hover {
+    @apply border-b-2 border-red-400 bg-slate-400;
+  }
 </style>

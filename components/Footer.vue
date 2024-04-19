@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { useRuntimeConfig } from 'nuxt/app';
+  import { useRuntimeConfig } from 'nuxt/app';
 
-const config = useRuntimeConfig();
-const email = config.public.email;
+  const config = useRuntimeConfig();
+  const email = config.public.email;
 </script>
