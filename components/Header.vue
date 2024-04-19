@@ -1,11 +1,6 @@
 <template>
   <div class="p-4 mb-4 bg-green-300">
     <div class="flex justify-between">
-      <div class=""> 
-        <a href="#" v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="setLocale(locale.code)">
-          set content to {{ locale.name }} ({{ locale.code }})
-        </a>
-      </div>
       <div class="">
         <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
           switch path to {{ locale.name }} ({{ locale.code }})
@@ -35,4 +30,5 @@ const language = computed({
   get: () => locale.value,
   set: (value) => setLocale(value)
 })
+console.log('Header.vue', { locale, locales, availableLocales, language })
 </script>

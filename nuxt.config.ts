@@ -9,8 +9,13 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxtjs/i18n'],
+  experimental: {
+    scanPageMeta: true,
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
+    defaultLocale: 'en',
+    strategy: 'prefix',
     locales: [
       {
         code: 'en',

@@ -1,8 +1,4 @@
 export default defineI18nConfig(() => ({
-  legacy: false,
-  strategy: 'prefix',
-  locale: 'en',
-  defaultLocale: 'en',
   messages: {
     en: {
       welcome: 'Welcome',
