@@ -28,47 +28,50 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, watch, computed } from 'vue';
-  import { useI18n } from 'vue-i18n'; 
-  import { useFetch } from 'nuxt/app';
+import { ref, watch, computed } from 'vue';
+import { useI18n } from 'vue-i18n'; 
+import { useFetch, useRuntimeConfig } from 'nuxt/app';
 
-  interface NewsItem {
-    id: string;
-    title: string;
-    short_16words: string;
-    url: string;
-    image: string;
+interface NewsItem {
+  id: string;
+  title: string;
+  short_16words: string;
+  url: string;
+  image: string;
+}
+
+interface NewsResult {
+  results: NewsItem[];
+}
+
+const config = useRuntimeConfig();
+const apiUrl = config.public.apiUrl;
+
+const { pending, data: newsDataRef } = await useFetch<NewsResult>(`https://www.bilgi.edu.tr/api/news/?site=${apiUrl}`);
+
+const newsData = ref<NewsResult>({ results: [] });
+
+if (newsDataRef.value) {
+  newsData.value = newsDataRef.value;
+}
+
+watch(newsDataRef, (newData) => {
+  if (newData) {
+    newsData.value = newData;
+  } else {
+    newsData.value = { results: [] };
   }
+});
 
-  interface NewsResult {
-    results: NewsItem[];
-  }
+const { locale } = useI18n();
 
-  const { pending, data: newsDataRef } = await useFetch<NewsResult>('https://www.bilgi.edu.tr/api/news/?site=test.bilgi.edu.tr');
+const filteredNews = computed(() => {
+  const newsPathSegment = locale.value === 'en' ? '/en/news' : '/tr/haber';
+  return newsData.value.results.filter(item => item.url.includes(newsPathSegment));
+});
 
-  const newsData = ref<NewsResult>({ results: [] });
-
-  if (newsDataRef.value) {
-    newsData.value = newsDataRef.value;
-  }
-
-  watch(newsDataRef, (newData) => {
-    if (newData) {
-      newsData.value = newData;
-    } else {
-      newsData.value = { results: [] };
-    }
-  });
-
-  const { locale } = useI18n();
-
-  const filteredNews = computed(() => {
-    const newsPathSegment = locale.value === 'en' ? '/en/news' : '/tr/haber';
-    return newsData.value.results.filter(item => item.url.includes(newsPathSegment));
-  });
-
-  const filteredEvents = computed(() => {
-    const eventsPathSegment = locale.value === 'en' ? '/en/event' : '/tr/etkinlik';
-    return newsData.value.results.filter(item => item.url.includes(eventsPathSegment));
-  });
+const filteredEvents = computed(() => {
+  const eventsPathSegment = locale.value === 'en' ? '/en/event' : '/tr/etkinlik';
+  return newsData.value.results.filter(item => item.url.includes(eventsPathSegment));
+});
 </script>

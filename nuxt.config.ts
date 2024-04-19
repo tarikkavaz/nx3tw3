@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      apiUrl: 'test.bilgi.edu.tr',
+      email: 'info@bilgi.edu.tr' 
+    }
+  },
   modules: ['@nuxtjs/i18n'],
   i18n: {
     vueI18n: './i18n.config.ts',
