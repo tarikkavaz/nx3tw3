@@ -20,9 +20,9 @@
 </template>
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'; 
-  const { locale } = useI18n();
+  const { t, locale } = useI18n();
   useSeoMeta({
-    title: 'About page',
-    description: 'This is the about page',
+    title: t('about'),
+    description: t('globalDescription') + ' - ' + t('aboutDescription'),
   })
 </script>
