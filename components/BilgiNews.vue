@@ -44,9 +44,8 @@ if (newsDataRef.value) {
 watch(newsDataRef, (newData) => {
   if (newData) {
     newsData.value = newData;
-    console.log(newData);
   } else {
-    console.log("No data or error in fetching data");
+    newsData.value = { results: [] };
   }
 });
 </script>

@@ -1,9 +1,12 @@
 <template>
   <div class="p-4 mb-4 bg-green-300">
+    <div class="mb-10">
+      <img :src="'https://tbl.bilgi.edu.tr/brand-resources/logotypes/bilgi/dark/bilgi-logotype-' + $i18n.locale + '-dark@2x.png'" class="h-24 pt-4" alt="">
+    </div>
     <div class="flex justify-between">
       <div class="">
         <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
-          switch path to {{ locale.name }} ({{ locale.code }})
+          {{ locale.name }} ({{ locale.code }})
         </NuxtLink>
       </div>
       <div class="">
@@ -13,10 +16,10 @@
       </div>
     </div>
     <nav class="mt-8">
-      <ul class="flex gap-2">
-        <li><NuxtLink :to="localePath('/')">{{ $t('home') }}</NuxtLink></li>
-        <li><NuxtLink :to="localePath('about')"> {{ $t('about') }}</NuxtLink></li>
-      </ul>
+      <div class="flex gap-2">
+        <NuxtLinkLocale to="/"> {{ $t('home') }} </NuxtLinkLocale>
+        <NuxtLinkLocale to="about"> {{ $t('about') }} </NuxtLinkLocale>
+      </div>
     </nav>
   </div>
 </template>

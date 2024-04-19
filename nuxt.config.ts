@@ -9,9 +9,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxtjs/i18n'],
-  experimental: {
-    scanPageMeta: true,
-  },
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
@@ -28,13 +25,9 @@ export default defineNuxtConfig({
     ],
     customRoutes: 'config',
     pages: {
-      '/': {
-        en: '/',
-        fr: '/',
-      },
       about: {
         en: '/about',
-        fr: '/hakkimizda',
+        tr: '/hakkimizda',
       },
     },
   }
