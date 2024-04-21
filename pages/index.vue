@@ -13,8 +13,8 @@ const { t, locale } = useI18n();
 const currentContent = computed(() => {
   const language = locale.value;
   return defineAsyncComponent(() =>
-    import(`@/pages/index${language.toUpperCase()}.vue`)
-      .catch(() => import('@/pages/indexEN.vue'))
+    import(`@/content/index${language.toUpperCase()}.vue`)
+      .catch(() => import('@/content/indexEN.vue'))
   );
 });
 
