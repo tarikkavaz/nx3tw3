@@ -15,9 +15,6 @@ export default defineNuxtConfig({
     }
   },
   modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
-  gtag: {
-    id: 'G-XXXXXXXXXX'
-  },
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
@@ -43,5 +40,8 @@ export default defineNuxtConfig({
         tr: '/iletisim',
       },
     },
-  }
+  },
+  gtag: {
+    id: 'G-XXXXXXXXXX'
+  },
 })
