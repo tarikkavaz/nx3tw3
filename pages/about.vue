@@ -9,6 +9,14 @@
       <p>tr Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima quaerat cupiditate vel molestiae atque. Molestiae aliquam, explicabo aperiam sequi, aut eveniet autem perferendis itaque necessitatibus reiciendis tenetur quae repellendus vel!</p>
     </div>
   </div>
+  <Alert class="bg-purple-600">
+    <div v-if="locale === 'en'">
+      <p>Alert</p>
+    </div>
+    <div v-if="locale === 'tr'">
+      <p>Uyarı</p>
+    </div>
+  </Alert>
   <Alert>
     <div v-if="locale === 'en'">
       <p>Alert</p>
@@ -19,7 +27,6 @@
   </Alert>
 </template>
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'; 
   const { t, locale } = useI18n();
   useSeoMeta({
     title: t('about'),
