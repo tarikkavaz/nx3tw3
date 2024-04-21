@@ -1,8 +1,8 @@
 export default {
   siteName: 'Website Adı',
   globalDescription: 'Bu Web Sitesi Açıklamasıdır',
-  home: 'Anasayfa',
-  homeDescription: 'Anasayfa açıklaması buraya yazılır.',
+  index: 'Anasayfa',
+  indexDescription: 'Anasayfa açıklaması buraya yazılır.',
   about: 'Hakkımızda',
   aboutDescription: 'Hakkımızda açıklaması buraya yazılır.',
   contact: 'İletişim',
@@ -10,6 +10,7 @@ export default {
   welcome: 'Hoşgeldiniz',
   loading: 'Yükleniyor...',
   nonews: 'Haber Bulunamadi',
+  alert: 'Uyarı',
   news: 'Haberler',
   events: 'Etkinlikler',
 }

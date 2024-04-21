@@ -1,8 +1,8 @@
 export default {
   siteName: 'Website Name',
   globalDescription: 'This is the Website Description',
-  home: 'Home',
-  homeDescription: 'Home description goes here.',
+  index: 'Home',
+  indexDescription: 'Home description goes here.',
   about: 'About',
   aboutDescription: 'About description goes here.',
   contact: 'Contact',
@@ -10,6 +10,7 @@ export default {
   welcome: 'Welcome',
   loading: 'Loading...',
   nonews: 'No News Found',
+  alert: 'Alert',
   news: 'News',
   events: 'Events',
 }
