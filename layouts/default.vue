@@ -2,7 +2,7 @@
   <div class="max-w-screen-xl p-4 mx-auto">
     <NuxtLoadingIndicator />
     <Header />
-    <main id="content">
+    <main>
       <slot />
     </main>
     <Footer />
@@ -22,24 +22,24 @@
   }
   #content {
     h1 {
-      @apply text-3xl font-bold;
+      @apply text-3xl font-bold my-8;
     }
     h2 {
-      @apply text-2xl font-bold;
+      @apply text-2xl font-bold my-6;
     } 
     h3 {
-      @apply text-xl font-bold;
+      @apply text-xl font-bold my-4;
     }
     h4 {
-      @apply text-lg font-bold;
+      @apply text-lg font-bold my-2;
     }
     h5 {
-      @apply text-base font-bold;
+      @apply text-base font-bold my-1;
     }
     a {
-      @apply text-blue-800 underline;
+      @apply bg-black/50 text-white px-1 py-1 rounded-md;
       &:hover {
-        @apply text-blue-600;
+        @apply bg-black;
       }
     }
   }
