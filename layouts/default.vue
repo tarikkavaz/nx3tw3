@@ -11,12 +11,11 @@
 <script setup lang="ts">
   const { t, locale } = useI18n();
   const config = useRuntimeConfig();
+  const route = useRoute();
   const siteurl = config.public.siteurl;
+  const currentFullUrl = computed(() => `${siteurl}${route.path}`);
   useSeoMeta({
-    title: `${t('siteName')}`,
-    ogTitle: `${t('siteName')}`,
-    twitterTitle: `${t('siteName')}`,
-    ogUrl: siteurl,
+    ogUrl: currentFullUrl.value,
     ogImage: siteurl + '/share.jpg',
     twitterImage: siteurl + '/share.jpg',
     twitterCard: 'summary_large_image',
@@ -24,15 +23,15 @@
   useHead({
     titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`,
     htmlAttrs: {
-    lang: locale.value
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.png'
-    }
-  ]
+      lang: locale.value
+    },
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon.png'
+      }
+    ]
   })
 </script>
 <style >

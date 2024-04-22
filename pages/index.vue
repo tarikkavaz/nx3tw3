@@ -9,8 +9,6 @@
 
 <script setup lang="ts">
 const { t, locale } = useI18n();
-const config = useRuntimeConfig();
-const siteurl = config.public.siteurl;
 const currentContent = computed(() => {
   const language = locale.value;
   return defineAsyncComponent(() =>
@@ -20,6 +18,9 @@ const currentContent = computed(() => {
 });
 
 useSeoMeta({
+  title: t('index') ,
+  ogTitle: `${t('index')} - ${t('siteName')}`,
+  twitterTitle: `${t('index')} - ${t('siteName')}`,
   description: t('globalDescription') + ' - ' + t('indexDescription'),
   ogDescription: t('globalDescription') + ' - ' + t('indexDescription'),
   twitterDescription: t('globalDescription') + ' - ' + t('indexDescription'),
