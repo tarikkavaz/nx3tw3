@@ -14,12 +14,17 @@
   const route = useRoute();
   const siteurl = config.public.siteurl;
   const currentFullUrl = computed(() => `${siteurl}${route.path}`);
-  useSeoMeta({
-    ogUrl: currentFullUrl.value,
-    ogImage: siteurl + '/share.jpg',
-    twitterImage: siteurl + '/share.jpg',
-    twitterCard: 'summary_large_image',
-  })
+
+  // Watch the currentFullUrl to update SEO metadata when it changes
+  watchEffect(() => {
+    useSeoMeta({
+      ogUrl: currentFullUrl.value,
+      ogImage: `${siteurl}/share.jpg`,
+      twitterImage: `${siteurl}/share.jpg`,
+      twitterCard: 'summary_large_image',
+    });
+  });
+
   useHead({
     titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`,
     htmlAttrs: {
@@ -34,7 +39,7 @@
     ]
   })
 </script>
-<style >
+<style>
   #header {
     .router-link-active {
       @apply border-b-2 border-green-500;
