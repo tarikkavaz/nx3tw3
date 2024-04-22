@@ -9,9 +9,30 @@
   </div>
 </template>
 <script setup lang="ts">
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const config = useRuntimeConfig();
+  const siteurl = config.public.siteurl;
+  useSeoMeta({
+    title: `${t('siteName')}`,
+    ogTitle: `${t('siteName')}`,
+    twitterTitle: `${t('siteName')}`,
+    ogUrl: siteurl,
+    ogImage: siteurl + '/share.jpg',
+    twitterImage: siteurl + '/share.jpg',
+    twitterCard: 'summary_large_image',
+  })
   useHead({
-    titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`
+    titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`,
+    htmlAttrs: {
+    lang: locale.value
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
   })
 </script>
 <style >
