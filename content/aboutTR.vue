@@ -8,7 +8,7 @@
 <p><strong>Bushwick Banksy</strong> tattooed raw <em>denim polaroid</em>, hoodie seitan small batch Pinterest kitsch High Life ennui try-hard banh mi brunch. Actually slow-carb skateboard, Bushwick pickled paleo asymmetrical synth 8-bit typewriter sustainable before they sold out locavore. Single-origin coffee flexitarian gastropub Marfa keffiyeh, kogi cardigan craft beer fashion axe shabby chic American Apparel. Flannel next level fap jean shorts deep v, occupy DIY art party 3 wolf moon freegan twee tousled craft beer. Chambray food truck typewriter, yr direct trade deep v blog. Cliche literally gentrify YOLO. Mumblecore gluten-free forage, readymade blog hashtag chia.</p>
 
 <h3>Subheader h3</h3>
-<ul>
+<ul class="mb-8 ml-8 list-disc">
     <li><strong>Hella</strong> direct trade letterpress,</li>
     <li>raw denim occupy Vice <em>iPhone locavore</em> chillwave sriracha banh mi</li>
     <li>Echo Park stumptown PBR. Flannel fixie narwhal</li>
@@ -23,7 +23,7 @@
 
 <h5>Subheader h5</h5>
 
-<ol>
+<ol class="mb-8 ml-8 list-decimal">
     <li><strong>Portland</strong> scenester selvage beard PBR selfies deep v dreamcatcher tousled chillwave</li>
     <li>Terry Richardson swag distillery jean shorts gentrify Neutra</li>
     <li>Banh mi semiotics <em>Bushwick</em>, Thundercats XOXO next level</li>

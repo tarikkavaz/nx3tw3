@@ -36,6 +36,9 @@
     h5 {
       @apply text-base font-bold my-1;
     }
+    p {
+      @apply my-4;
+    }
     a {
       @apply bg-black/50 text-white px-1 py-1 rounded-md;
       &:hover {
