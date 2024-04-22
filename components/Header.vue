@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 mb-4 bg-green-300" id="header">
-    <div class="flex items-center justify-between">
+    <div class="items-center justify-between md:flex">
       <Logo />
       <LangSwitch />
     </div>
