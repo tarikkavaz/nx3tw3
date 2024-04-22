@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+const BASE_URL = 'test.bilgi.edu.tr';
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
@@ -11,8 +14,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteurl: 'https://test.bilgi.edu.tr',
-      apiUrl: 'test.bilgi.edu.tr',
+      siteurl: `https://${BASE_URL}`,
+      apiUrl: BASE_URL,
       email: 'info@bilgi.edu.tr' 
     }
   },
