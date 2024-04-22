@@ -1,8 +1,8 @@
 <template>
-  <div class="p-4">
+  <div class="max-w-screen-xl p-4 mx-auto">
     <NuxtLoadingIndicator />
     <Header />
-    <main class="">
+    <main id="content">
       <slot />
     </main>
     <Footer />
@@ -18,6 +18,29 @@
   #header {
     .router-link-active {
       @apply border-b-2 border-green-500;
+    }
+  }
+  #content {
+    h1 {
+      @apply text-3xl font-bold;
+    }
+    h2 {
+      @apply text-2xl font-bold;
+    } 
+    h3 {
+      @apply text-xl font-bold;
+    }
+    h4 {
+      @apply text-lg font-bold;
+    }
+    h5 {
+      @apply text-base font-bold;
+    }
+    a {
+      @apply text-blue-800 underline;
+      &:hover {
+        @apply text-blue-600;
+      }
     }
   }
   #footer {

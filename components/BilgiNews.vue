@@ -4,7 +4,7 @@
     <div v-else-if="filteredNews.length || filteredEvents.length">
       <h3 v-if="filteredNews.length" class="mb-4 text-2xl">{{ $t('news') }}</h3>
       <NuxtLink v-for="item in filteredNews" :to="item.url" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
-        <img :src="item.image" :alt="item.short_16words" class="w-auto max-h-20">
+        <img :src="item.image" :alt="item.short_16words" class="w-auto rounded-lg max-h-20">
         <div>
           <p class="text-2xl">{{ item.title }}</p>
           <p>{{ item.short_16words }}</p>
@@ -13,7 +13,7 @@
       
       <h3 v-if="filteredEvents.length" class="mt-8 mb-4 text-2xl">{{ $t('events') }}</h3>
       <NuxtLink v-for="item in filteredEvents" :to="item.url" :key="item.id" class="flex gap-4 p-4 mb-2 bg-orange-300 last:mb-0" target="_blank">
-        <img :src="item.image" :alt="item.short_16words" class="w-auto max-h-20">
+        <img :src="item.image" :alt="item.short_16words" class="w-auto rounded-lg max-h-20">
         <div>
           <p class="text-2xl">{{ item.title }}</p>
           <p>{{ item.short_16words }}</p>
