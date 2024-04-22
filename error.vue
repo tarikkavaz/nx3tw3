@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <div class="p-4 mb-4 bg-purple-400">
+    <div class="p-4 mb-4 bg-purple-400" id="content">
       <h1>You've Arrived Here on Error</h1>
       <button class="button" @click="goBack">{{ $t('home') }}</button>
     </div>

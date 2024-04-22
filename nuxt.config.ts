@@ -10,9 +10,17 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      siteurl: 'https://test.bilgi.edu.tr',
       apiUrl: 'test.bilgi.edu.tr',
       email: 'info@bilgi.edu.tr' 
     }
+  },
+  $development: { 
+    runtimeConfig: {
+      public: {
+        siteurl: 'http://localhost:3000',
+      }
+    },
   },
   modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
   i18n: {

@@ -10,7 +10,8 @@
 </template>
 <script setup lang="ts">
 const { t, locale } = useI18n();
-
+const config = useRuntimeConfig();
+const siteurl = config.public.siteurl;
 const currentContent = computed(() => {
   const language = locale.value;
   return defineAsyncComponent(() =>
@@ -19,8 +20,28 @@ const currentContent = computed(() => {
   );
 });
 
-  useSeoMeta({
-    title: t('about'),
-    description: t('globalDescription') + ' - ' + t('aboutDescription'),
-  })
+useSeoMeta({
+  title: `${t('siteName')}`,
+  ogTitle: `${t('siteName')}`,
+  twitterTitle: `${t('siteName')}`,
+  description: t('globalDescription') + ' - ' + t('aboutDescription'),
+  ogDescription: t('globalDescription') + ' - ' + t('aboutDescription'),
+  twitterDescription: t('globalDescription') + ' - ' + t('aboutDescription'),
+  ogUrl: siteurl,
+  ogImage: siteurl + '/share.jpg',
+  twitterImage: siteurl + '/share.jpg',
+  twitterCard: 'summary_large_image',
+})
+useHead({
+  htmlAttrs: {
+    lang: locale.value
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
 </script>
