@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
@@ -22,7 +23,6 @@ export default defineNuxtConfig({
       }
     },
   },
-  modules: ['@nuxtjs/i18n', 'nuxt-gtag'],
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
