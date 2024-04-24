@@ -1,4 +1,4 @@
-export function usePageSetup(pageName: string) {
+export function pageSetup(pageName: string) {
   const { t, locale } = useI18n();
 
   const currentContent = computed(() => {

@@ -10,5 +10,5 @@
 </template>
 <script setup lang="ts">
   const pageName = 'contact'; // Set Page Name
-  const { currentContent } = usePageSetup(pageName);
+  const { currentContent } = pageSetup(pageName);
 </script>
