@@ -13,4 +13,12 @@ export default {
   alert: 'Alert',
   news: 'News',
   events: 'Events',
+  price: 'Price',
+  rating: 'Rating',
+  stock: 'Stock',
+  brand: 'Brand',
+  category: 'Category',
+  description: 'Description',
+  image: 'Image',
+  images: 'Images',
 }

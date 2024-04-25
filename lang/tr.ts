@@ -13,4 +13,12 @@ export default {
   alert: 'Uyarı',
   news: 'Haberler',
   events: 'Etkinlikler',
+  price: 'Fiyat',
+  rating: 'Puan',
+  stock: 'Stok',
+  brand: 'Marka',
+  category: 'Kategori',
+  description: 'Açıklama',
+  image: 'Resim',
+  images: 'Resimler',
 }
